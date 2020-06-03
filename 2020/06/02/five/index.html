@@ -156,10 +156,11 @@
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="今天学习了mysql数据库的基础语法，写了些-sql语句"><a href="#今天学习了mysql数据库的基础语法，写了些-sql语句" class="headerlink" title="今天学习了mysql数据库的基础语法，写了些 sql语句"></a>今天学习了mysql数据库的基础语法，写了些 sql语句</h3><p><strong>第一个</strong>：<a href="http://qb82db59f.bkt.clouddn.com/1%E9%A2%98.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/1%E9%A2%98.png</a></p>
-<p><strong>第二个</strong>：<a href="http://qb82db59f.bkt.clouddn.com/%E4%BA%8C%E9%A2%98.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/%E4%BA%8C%E9%A2%98.png</a></p>
+                <h3 id="最近学习了mysql数据库的基础语法，做了些-sql语句题"><a href="#最近学习了mysql数据库的基础语法，做了些-sql语句题" class="headerlink" title="最近学习了mysql数据库的基础语法，做了些 sql语句题"></a>最近学习了mysql数据库的基础语法，做了些 sql语句题</h3><p><strong>第一套</strong>：<a href="http://qb82db59f.bkt.clouddn.com/1%E9%A2%98.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/1%E9%A2%98.png</a></p>
+<p><strong>第二套</strong>：<a href="http://qb82db59f.bkt.clouddn.com/%E4%BA%8C%E9%A2%98.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/%E4%BA%8C%E9%A2%98.png</a></p>
+<p><strong>第三套</strong>：<a href="http://qb82db59f.bkt.clouddn.com/3%E9%A2%98.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/3%E9%A2%98.png</a></p>
 <hr>
-<h3 id="下面例句一些常用例句："><a href="#下面例句一些常用例句：" class="headerlink" title="下面例句一些常用例句："></a>下面例句一些常用例句：</h3><p><strong>创建数据库、数据表</strong><br>– 创建数据库<br>create database 库名 charset=utf8;</p>
+<h3 id="下面列举一些常用例句："><a href="#下面列举一些常用例句：" class="headerlink" title="下面列举一些常用例句："></a>下面列举一些常用例句：</h3><p><strong>创建数据库、数据表</strong><br>– 创建数据库<br>create database 库名 charset=utf8;</p>
 <p>– 使用数据库（使用后 才能进行创建表等操作）<br>use 库名;</p>
 <p>– 创建表<br>create table 表名(<br>    id int unsigned primary key auto_increment not null,<br>    name varchar(20) default ‘’,<br>    age tinyint unsigned default 0,<br>    height decimal(5,2),<br>    gender enum(‘男’,’女’,’中性’,’保密’) default ‘保密’,<br>    cls_id int unsigned default 0,<br>    is_delete bit default 0<br>);</p>
 <p>说明：<br>name 称之为列名 ，varchar() 称之为列类型,以次类推<br>primary key：主键<br>auto_increment 自增长（1,2,3…）<br>not null：非空<br>unique:    唯一约束性<br>default ‘’ :默认为<br>decimal:小数，5为总长度，2为小数点后保留几位<br>enum：枚举类型</p>
@@ -178,14 +179,53 @@
 <p>例：查询编号大于3的学生<br>select * from students where id &gt; 3;</p>
 <p>例：查询姓名不是“黄蓉”的学生<br>select * from students where id &lt;= 4;</p>
 <hr>
+<h4 id="where-和having-区别"><a href="#where-和having-区别" class="headerlink" title="where 和having 区别"></a>where 和having 区别</h4><p>“Where” 是一个约束声明，使用Where来约束来之数据库的数据，Where是在结果返回之前起作用的，且Where中不能使用聚合函数。</p>
+<p>“having”是一个过滤声明，是在查询返回结果集以后对查询结果进行的过滤操作，在Having中可以使用聚合函数。<br>having子句可以让我们筛选成组后的各组数据，where子句在聚合前先筛选记录．也就是说作用在group by子句和having子句前；而 having子句在聚合后对组记录进行筛选。</p>
+<hr>
 <p><strong>逻辑运算符</strong><br>and<br>or<br>not</p>
 <p>例：查询编号大于3的女同学<br>select * from students where id &gt; 3 and gender=0;<br>例：查询编号小于4或没被删除的学生<br>select * from students where id &lt; 4 or is_delete=0;</p>
 <hr>
 <p><strong>模糊查询</strong><br>like<br>%表示任意多个任意字符<br>_表示一个任意字符</p>
 <p>例：查询姓兰的学生<br>select * from students where name like ‘兰%’;<br>例8：查询姓兰并且“名”是一个字的学生<br>select * from students where name like ‘兰_’;<br>例9：查询姓兰或叫宁的学生<br>select * from students where name like ‘兰%’ or name like ‘%宁’;</p>
 <hr>
-<p>待补充。。。</p>
-
+<p><strong>范围查询</strong><br>in<br>表示在一个非连续的范围内</p>
+<p>例：查询编号是1或3或8的学生<br>select * from students where id in(1,3,8);</p>
+<p>between … and …<br>表示在一个连续的范围内</p>
+<p>例：查询编号为3至8的学生<br>select * from students where id between 3 and 8;</p>
+<hr>
+<p><strong>空判断</strong><br>is null<br>判空</p>
+<p>例：查询没有填写身高的学生<br>select * from students where height is null;</p>
+<p>is not null<br>判非空</p>
+<p>例：查询填写了身高的学生<br>select * from students where height is not null;</p>
+<hr>
+<p><strong>排序</strong><br>order by<br>排序（默认从小到大 asc）<br>select * from 表名 order by 列1 asc|desc [,列2 asc|desc,…]</p>
+<p>asc从小到大排列，即升序<br>desc从大到小排序，即降序</p>
+<hr>
+<p><strong>聚合函数</strong></p>
+<p>总数：count(<em>)表示计算总行数，括号中写星与列名，结果是相同的<br>例：查询学生总数<br>select count(</em>) from students;</p>
+<p>最大值：max(列)表示求此列的最大值<br>例：查询女生的编号最大值<br>select max(id) from students where gender=2;</p>
+<p>最小值：min(列)表示求此列的最小值<br>例：查询未删除的学生最小编号<br>select min(id) from students where is_delete=0;</p>
+<p>求和：sum(列)表示求此列的和<br>例：查询男生的总年龄<br>select sum(age) from students where gender=1;</p>
+<p>平均值：avg(列)表示求此列的平均值<br>例：查询未删除女生的编号平均值<br>select avg(id) from students where is_delete=0 and gender=2;</p>
+<hr>
+<p><strong>分组</strong><br>group by<br>group by的含义:将查询结果按照1个或多个字段进行分组，字段值相同的为一组<br>group by可用于单个字段分组，也可用于多个字段分组</p>
+<p>例：按性别分<br>select gender from students group by gender;</p>
+<p>group by + group_concat()<br>1.group_concat(字段名)可以作为一个输出字段来使用，<br>2.表示分组之后，根据分组结果，使用group_concat()来放置每一组的某字段的值的集合</p>
+<hr>
+<p><strong>分页</strong><br>limit start,count<br>从start(第几条)开始，获取count条数据<br>select * from 表名 limit start,count</p>
+<p>例：查询前3行男生信息<br>select * from students where gender=1 limit 0,3;</p>
+<hr>
+<p><strong>连接查询</strong><br>当查询结果的列来源于多张表时，需要将多张表连接成一个大的数据集，再选择合适的列返回</p>
+<p>inner join-内连接查询：查询的结果为两个表匹配到的数据<br>left join-左连接查询：查询的结果为两个表匹配到的数据，左表特有的数据，对于右表中不存在的数据使用null填充<br>reght-join-右连接查询：查询的结果为两个表匹配到的数据，右表特有的数据，对于左表中不存在的数据使用null填充<br>通用语法：select * from 表1 inner或left或right join 表2 on 表1.列 = 表2.列</p>
+<p>例：使用内/左/右连接查询班级表与学生表<br>select * from students inner/left/right join classes on students.cls_id = classes.id;</p>
+<hr>
+<p><strong>子查询</strong></p>
+<p>在一个 select查询 语句中,嵌入了另外一个 select查询 语句, 那么被嵌入的 select 语句称之为子查询语句</p>
+<h5 id="1-子查询分类"><a href="#1-子查询分类" class="headerlink" title="1.子查询分类"></a>1.子查询分类</h5><p>标量子查询: 子查询返回的结果是一个数据(一行一列)<br>例：先查询班级学生平均年龄，在查询大于平均年龄的学生。最终：查询班级学生的平均身高<br>select * from students where age &gt; (select avg(age) from students);</p>
+<p>列子查询: 返回的结果是一列(一列多行)<br>例：1.找出学生表中所有的班级 id; 2.找出班级表中对应的名字.最终：查询还有学生在班的所有班级名字<br>select name from classes where id in (select cls_id from students);</p>
+<p>行子查询: 返回的结果是一行(一行多列)<br>需求: 查找班级年龄最大,身高最高的学生<br>行元素: 将多个字段合成一个行元素,在行级子查询中会使用到行元素<br>select * from students where (height,age) = (select max(height),max(age) from students);</p>
+<hr>
+<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3>
             </div>
 
             <!-- Post Comments -->
