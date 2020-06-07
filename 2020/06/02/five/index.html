@@ -160,6 +160,8 @@
 <p><strong>第二套</strong>：<a href="http://qb82db59f.bkt.clouddn.com/%E4%BA%8C%E9%A2%98.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/%E4%BA%8C%E9%A2%98.png</a></p>
 <p><strong>第三套</strong>：<a href="http://qb82db59f.bkt.clouddn.com/3%E9%A2%98.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/3%E9%A2%98.png</a></p>
 <hr>
+<h3 id="周末练习题"><a href="#周末练习题" class="headerlink" title="周末练习题"></a>周末练习题</h3><p><strong>1-4卷</strong>：<a href="http://qb82db59f.bkt.clouddn.com/1-4%E5%8D%B7.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/1-4%E5%8D%B7.png</a><br><strong>5-8卷</strong>：<a href="http://qb82db59f.bkt.clouddn.com/5-8%E5%8D%B7.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/5-8%E5%8D%B7.png</a><br><strong>9-12卷</strong>：<a href="http://qb82db59f.bkt.clouddn.com/9-12%E5%8D%B7.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/9-12%E5%8D%B7.png</a><br><strong>13-15卷</strong>：<a href="http://qb82db59f.bkt.clouddn.com/13-15%E5%8D%B7.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/13-15%E5%8D%B7.png</a></p>
+<hr>
 <h3 id="下面列举一些常用例句："><a href="#下面列举一些常用例句：" class="headerlink" title="下面列举一些常用例句："></a>下面列举一些常用例句：</h3><p><strong>创建数据库、数据表</strong><br>– 创建数据库<br>create database 库名 charset=utf8;</p>
 <p>– 使用数据库（使用后 才能进行创建表等操作）<br>use 库名;</p>
 <p>– 创建表<br>create table 表名(<br>    id int unsigned primary key auto_increment not null,<br>    name varchar(20) default ‘’,<br>    age tinyint unsigned default 0,<br>    height decimal(5,2),<br>    gender enum(‘男’,’女’,’中性’,’保密’) default ‘保密’,<br>    cls_id int unsigned default 0,<br>    is_delete bit default 0<br>);</p>
@@ -225,7 +227,7 @@
 <p>列子查询: 返回的结果是一列(一列多行)<br>例：1.找出学生表中所有的班级 id; 2.找出班级表中对应的名字.最终：查询还有学生在班的所有班级名字<br>select name from classes where id in (select cls_id from students);</p>
 <p>行子查询: 返回的结果是一行(一行多列)<br>需求: 查找班级年龄最大,身高最高的学生<br>行元素: 将多个字段合成一个行元素,在行级子查询中会使用到行元素<br>select * from students where (height,age) = (select max(height),max(age) from students);</p>
 <hr>
-<h3 id="未完待续。。。"><a href="#未完待续。。。" class="headerlink" title="未完待续。。。"></a>未完待续。。。</h3>
+
             </div>
 
             <!-- Post Comments -->
