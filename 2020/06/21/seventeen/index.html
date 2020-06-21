@@ -151,12 +151,20 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1119895080,3120720251&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Jemeter初学-对数据库进行增删改查</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4018192705,3462437572&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >文件操作</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>1.官网中下载一个 连接mysql数据库的jar包，放到新建的测试计划之中<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/1.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/1.png</a><br>2.新建个JDBC Connection Configuration 用来连接数据库(右击线程组-添加-配置原件-JDBC Connection Configuration)<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/2.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/2.png</a><br>3.新建一个 JDBC Request 用来写sql语句（右击线程组-添加-取样器-JDBC Request）<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/3.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/3.png</a><br>注意：标记处与上文中甜的数据库名要保持一致：<a href="http://qb82db59f.bkt.clouddn.com/4.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/4.png</a></p>
+                <h1 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h1><h3 id="文件打开和关闭"><a href="#文件打开和关闭" class="headerlink" title="文件打开和关闭"></a>文件打开和关闭</h3><p>1&gt;打开文件<br>在python，使用open函数，可以打开一个已经存在的文件，或者创建一个新文件<br>open(文件名，访问模式)<br>示例如下：<br>    f = open(‘test.txt’, ‘w’)<br>&lt;2&gt;关闭文件<br>close( )<br>示例如下：<br>    # 新建一个文件，文件名为:test.txt<br>    f = open(‘test.txt’, ‘w’)</p>
+<pre><code># 关闭这个文件
+f.close()</code></pre><h3 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h3><p>&lt;1&gt;写数据(write)<br>使用write()可以完成向文件写入数据</p>
+<p>demo01: 新建一个文件 file.py,向其中写入如下代码:（pycharm环境）<br>f = open(‘test.txt’, ‘w’)<br>f.write(‘hello world, i am here!’)<br>f.close()<br>&lt;2&gt;读数据(read)<br>使用read(num)可以从文件中读取数据，num表示要从文件中读取的数据的长度（单位是字节），如果没有传入num，那么就表示读取文件中所有的数据<br>demo: 新建一个文件file_read_test.py，向其中写入如下代码:</p>
+<p>f = open(‘test.txt’, ‘r’)<br>content = f.read(5)  # 最多读取5个数据<br>print(content)<br>print(“-“*30)  # 分割线，用来测试</p>
+<p>content = f.read()  # 从上次读取的位置继续读取剩下的所有的数据<br>print(content)</p>
+<p>f.close()  # 关闭文件<br>&lt;3&gt;读数据（readlines）<br>就像read没有参数时一样，readlines可以按照行的方式把整个文件中的内容进行一次性读取，并且返回的是一个列表，其中每一行的数据为一个元素</p>
+<h3 id="文件与文件夹操作"><a href="#文件与文件夹操作" class="headerlink" title="文件与文件夹操作"></a>文件与文件夹操作</h3><p>1.文件重命名<br>os模块中的rename()可以完成对文件的重命名操作</p>
+<p>rename(需要修改的文件名, 新的文件名)<br>2.删除文件<br>os模块中的remove()可以完成对文件的删除操作<br>remove(待删除的文件名)<br>import os<br>os.remove(“毕业论文.txt”)<br>3.创建文件夹<br>import os<br>os.mkdir(“张三”)<br>. 获取当前目录<br>import os<br>os.getcwd()<br>5.改变默认目录<br>import os<br>os.chdir(“../“)<br>6.获取目录列表<br>import os<br>os.listdir(“./“)<br>7.删除文件夹<br>import os<br>os.rmdir(“张三”)</p>
 
             </div>
 
@@ -219,8 +227,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/seventeen/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/seventeen/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

@@ -151,12 +151,29 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1119895080,3120720251&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Jemeter初学-对数据库进行增删改查</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4018192705,3462437572&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Python字符串常见操作方法</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>1.官网中下载一个 连接mysql数据库的jar包，放到新建的测试计划之中<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/1.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/1.png</a><br>2.新建个JDBC Connection Configuration 用来连接数据库(右击线程组-添加-配置原件-JDBC Connection Configuration)<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/2.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/2.png</a><br>3.新建一个 JDBC Request 用来写sql语句（右击线程组-添加-取样器-JDBC Request）<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/3.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/3.png</a><br>注意：标记处与上文中甜的数据库名要保持一致：<a href="http://qb82db59f.bkt.clouddn.com/4.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/4.png</a></p>
+                <h1 id="字符串常见操作方法"><a href="#字符串常见操作方法" class="headerlink" title="字符串常见操作方法"></a>字符串常见操作方法</h1><h3 id="方法01：find"><a href="#方法01：find" class="headerlink" title="方法01：find()"></a>方法01：find()</h3><p>方法说明：检测 str 是否包含在 mystr中，如果是返回开始的索引值，否则返回-1<br>例：my_str = “hello world hello python”<br>print(my_str.find(‘python’))  为：18</p>
+<h3 id="方法02：index"><a href="#方法02：index" class="headerlink" title="方法02：index()"></a>方法02：index()</h3><p>方法说明：检测 str 是否包含在 mystr中，如果是返回开始的索引值，否则报错<br>格式：my_str.index(str, start=0, end=len(mystr))<br>例：my_str = “hello world hello python”<br>print(my_str.index(‘py’,0,25))  为：18</p>
+<h3 id="方法03：count"><a href="#方法03：count" class="headerlink" title="方法03：count()"></a>方法03：count()</h3><p>方法说明：返回 str在start和end之间 在 mystr里面出现的次数<br>格式：my_str.count(str, start=0, end=len(mystr))<br>print(my_str.count(‘1’))  为：5</p>
+<h3 id="方法04：replace"><a href="#方法04：replace" class="headerlink" title="方法04：replace()"></a>方法04：replace()</h3><p>方法说明：把 mystr 中的 str1 替换成 str2,如果 count 指定，则替换不超过 count 次.<br>格式：my_str.replace(str1, str2,  mystr.count(str1))<br>print(my_str.replace(‘hello’,’HELLO’,1))  为：第一个hello为大写</p>
+<h3 id="方法05：split"><a href="#方法05：split" class="headerlink" title="方法05：split()"></a>方法05：split()</h3><p>方法说明：以 str 为分隔符切片 mystr，如果 maxsplit有指定值，则仅分隔 maxsplit 个子字符串<br>格式：my_str.split(str=” “, 2)    </p>
+<h3 id="方法06：startswith"><a href="#方法06：startswith" class="headerlink" title="方法06：startswith()"></a>方法06：startswith()</h3><p>方法说明：检查字符串是否是以 str 开头, 是则返回 True，否则返回 False<br>格式：my_str.startswith(str) </p>
+<h3 id="方法07：endswith"><a href="#方法07：endswith" class="headerlink" title="方法07：endswith()"></a>方法07：endswith()</h3><p>方法说明：检查字符串是否以obj结束，如果是返回True,否则返回 False.<br>格式：my_str.endswith(obj)</p>
+<h3 id="方法08：upper"><a href="#方法08：upper" class="headerlink" title="方法08：upper()"></a>方法08：upper()</h3><p>方法说明：转换 mystr 中的小写字母为大写<br>格式：my_str.upper()</p>
+<h3 id="方法09：lower"><a href="#方法09：lower" class="headerlink" title="方法09：lower()"></a>方法09：lower()</h3><p>方法说明：转换 mystr 中所有大写字符为小写<br>格式：my_str.lower()</p>
+<h3 id="方法10：title"><a href="#方法10：title" class="headerlink" title="方法10：title()"></a>方法10：title()</h3><p>方法说明：把字符串的每个单词首字母大写<br>格式：my_str.title()</p>
+<h3 id="方法11：capitalize"><a href="#方法11：capitalize" class="headerlink" title="方法11：capitalize()"></a>方法11：capitalize()</h3><p>方法说明：把字符串的第一个字符大写<br>格式：my_str.capitalize()</p>
+<h3 id="方法12：isdigit"><a href="#方法12：isdigit" class="headerlink" title="方法12：isdigit()"></a>方法12：isdigit()</h3><p>方法说明：如果 mystr 只包含数字则返回 True 否则返回 False.<br>格式：my_str.isdigit() </p>
+<h3 id="方法13：isalnum"><a href="#方法13：isalnum" class="headerlink" title="方法13：isalnum()"></a>方法13：isalnum()</h3><p>方法说明：如果 mystr 所有字符都是字母或数字则返回 True,否则返回 False<br>格式：my_str.isalnum() </p>
+<h3 id="方法14：lstrip"><a href="#方法14：lstrip" class="headerlink" title="方法14：lstrip()"></a>方法14：lstrip()</h3><p>方法说明：删除 my_str 左边的空白字符<br>格式：my_str.lstrip() </p>
+<h3 id="方法15：rstrip"><a href="#方法15：rstrip" class="headerlink" title="方法15：rstrip()"></a>方法15：rstrip()</h3><p>方法说明：删除 mystr 字符串末尾的空白字符<br>格式：my_str.rstrip() </p>
+<h3 id="方法16：strip"><a href="#方法16：strip" class="headerlink" title="方法16：strip()"></a>方法16：strip()</h3><p>方法说明：删除mystr字符串两端的空白字符<br>格式：my_str.strip() </p>
+<h3 id="方法17：rfind"><a href="#方法17：rfind" class="headerlink" title="方法17：rfind()"></a>方法17：rfind()</h3><p>方法说明：类似于 find()函数，不过是从右边开始查找.<br>格式：my_str.rfind(str, start=0,end=len(mystr) )</p>
+<h3 id="方法18：join"><a href="#方法18：join" class="headerlink" title="方法18：join()"></a>方法18：join()</h3><p>方法说明：str 中每个字符后面插入my_str,构造出一个新的字符串<br>格式：my_str.join(str)</p>
 
             </div>
 
@@ -219,8 +236,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/twelve/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/twelve/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

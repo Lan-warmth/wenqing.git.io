@@ -152,16 +152,34 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4018192705,3462437572&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >JEmeter 初学-安装</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Python 基础</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h2 id="Jmeter的基本介绍"><a href="#Jmeter的基本介绍" class="headerlink" title="Jmeter的基本介绍"></a>Jmeter的基本介绍</h2><h3 id="1-简单介绍"><a href="#1-简单介绍" class="headerlink" title="1. 简单介绍"></a>1. 简单介绍</h3><p>JMeter是一个纯粹的Java编写的应用程序，它主要是用来进行负载和性能测试。原先它是为Web/HTTP测试而设计的。设计JMeter最初始的目的是用来测试Web Application但是现在已经扩展了很多功能。JMeter通常被用来对一些静态的或者动态资源（比如PHP, Java，ASP.Net等编写的Web，或者是Java Object， Data Bases and Queries, FTP 服务器等等）进行性能测试。 它通常模拟大量的数据对一个Server或者一个Server Group 网络等进行负载测试。然后通过分析它产生的性能图表来判断测试结果。和其他性能压测工具相比较，还是比较轻量级的。官网有更详细的介绍 <a href="http://jmeter.apache.org/" target="_blank" rel="noopener">http://jmeter.apache.org/</a></p>
-<h3 id="我们为什么使用它"><a href="#我们为什么使用它" class="headerlink" title="我们为什么使用它"></a>我们为什么使用它</h3><p>开源免费，基于Java编写，可集成到其他系统可拓展各个功能插件<br>支持接口测试，压力测试等多种功能，支持录制回放，入门简单<br>相较于自己编写框架活其他开源工具，有较为完善的UI界面，便于接口调试<br>多平台支持，可在Linux，Windows，Mac上运行<br>轻量级，和其他测试工具相比更加灵活性</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>1 . 在官网上下载（依据自己系统实际情况） <a href="http://jmeter.apache.org/download_jmeter.cgi" target="_blank" rel="noopener">http://jmeter.apache.org/download_jmeter.cgi</a><br>2.下载完成后解压安装包<br>3.打开 bin目录<br>详图：<a href="http://qb82db59f.bkt.clouddn.com/%E5%AE%89%E8%A3%85.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/%E5%AE%89%E8%A3%85.png</a></p>
-<p>4.windows系统打开Jmeter.bat<br>  liux系统打开 Jmeter.sh<br>5.打开成功后，会弹出黑窗口 无须手动操作 自动出现 Apache Jmeter</p>
-<hr>
-<p>安装结束</p>
+                <h1 id="Python-的基本知识"><a href="#Python-的基本知识" class="headerlink" title="Python 的基本知识"></a>Python 的基本知识</h1><h3 id="python优点-缺点"><a href="#python优点-缺点" class="headerlink" title="python优点/缺点"></a>python优点/缺点</h3><p>优点：简单易学 、免费开源、丰富的库、可扩展性、可移植性、面向对象、规范的代码。<br>缺点：无明显缺点，唯一的是执行效率慢</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>所谓变量，可以理解为菜篮子，如果需要存储多个数据，最简单的方式是有多个变量，当然了也可以使用一个<br>程序就是用来处理数据的，而变量就是用来存储数据的。<br>变量的类型<br>数字-int、float<br>布尔-True、False<br>字符串 str<br>列表 list<br>Tuple 元组<br>Dict  字典、</p>
+<h4 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h4><h3 id="什么是标识符？"><a href="#什么是标识符？" class="headerlink" title="什么是标识符？"></a>什么是标识符？</h3><p>开发人员在程序中自定义的一些符号和名称<br>标识符是自己定义的,如变量名 、函数名等</p>
+<h3 id="标识符的命名规则："><a href="#标识符的命名规则：" class="headerlink" title="标识符的命名规则："></a>标识符的命名规则：</h3><p>1.标识符只能由字母、下划线“_”、数字组成。<br>2.标识符不能以数字开头。<br>3.标识符不能使用关键字（不能与python中的关键字重名）。</p>
+<h3 id="标识符命名建议："><a href="#标识符命名建议：" class="headerlink" title="标识符命名建议："></a>标识符命名建议：</h3><p>标识符命名应“见名知意”。</p>
+<h3 id="关键字，是python已经使用的了，所以不允许开发者自己定义和关键字相同的名字的标识符"><a href="#关键字，是python已经使用的了，所以不允许开发者自己定义和关键字相同的名字的标识符" class="headerlink" title="关键字，是python已经使用的了，所以不允许开发者自己定义和关键字相同的名字的标识符"></a>关键字，是python已经使用的了，所以不允许开发者自己定义和关键字相同的名字的标识符</h3><p>可在命令提示符中 先输入python 后 输入import keyword 回车 再输入 keyword kwlist 可看到</p>
+<h3 id="标识符的命名方法"><a href="#标识符的命名方法" class="headerlink" title="标识符的命名方法"></a>标识符的命名方法</h3><p>一种命名法是用下划线“_”来连接所有的单词，例：my_list , user_name<br>小驼峰式命名法（lower camel case）： 第一个单词以小写字母开始；第二个单词的首字母大写，例如：myName、myList<br>大驼峰式命名法（upper camel case）： 每一个单字的首字母都采用大写字母，例如：UserName、FirstName、LastName</p>
+<h4 id="Python-的输出"><a href="#Python-的输出" class="headerlink" title="Python 的输出"></a>Python 的输出</h4><p>print()作为Python 的输出<br>格式化输出可简化程序<br>常用的格式符号<br>%s—字符串<br>%d—十进制的整数（int）<br>%f—浮点<br>%c—字符<br>换行输出：在输出的时候，如果有\n那么，此时\n后的内容会在另外一行显示</p>
+<h4 id="Python-的输入"><a href="#Python-的输入" class="headerlink" title="Python 的输入"></a>Python 的输入</h4><p>input()作为Python 的输入</p>
+<p>python2.x和python3.x中的输入还是有所区别的：<br>    python2.x中的输入是这样的：raw_input()<br>    python3.x中的输入是这样的：input()</p>
+<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><p>python支持以下几种运算符：<br>1.算术运算符<br><img src="https://img-blog.csdnimg.cn/20181106173710443.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hvdXlhbmh1YTE=,size_16,color_FFFFFF,t_70" alt=""><br>2.赋值运算符<br>‘=’:把=右边的结果给左边的变量<br>3.复合赋值运算符<br><img src="https://img-blog.csdn.net/2018073108142850?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjgzNDYwOQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt=""><br>4.比较运算符<br>==   !=  &gt;  &lt;  &gt;=  &lt;=<br>5.逻辑运算符<br>==   !=  &gt;  &lt;  &gt;=  &lt;=</p>
+<h4 id="判断语句"><a href="#判断语句" class="headerlink" title="判断语句"></a>判断语句</h4><p>1.如果某些条件满足，才能做某件事情，而不满足时不允许做，这就是所谓的判断<br>if语句是用来进行判断的，其使用格式如下：</p>
+<p>if 要判断的条件:<br>        条件成立时，要做的事情<br>可使用 关系、逻辑运算符<br>2.如果某些条件满足，才能做某件事情，而不满足时，做其他事<br>使用 if -else<br>3.if能完成当xxx时做事情<br>if-else能完成当xxx时做事情1，否则做事情2<br>如果有这样一种情况：当xxx1满足时做事情1；当xxx1不满足、xxx2满足时做事情2；当xxx2不满足、xxx3满足时做事情3，那该怎么实现<br>使用elif<br>特别注意：<br>1.elif必须和if一起使用，否则出错<br>2.else 一般用在最后，即所有条件都不满足时使用</p>
+<p>最终实现：<br>def func():<br>    a=int(input(‘请输入’))<br>    if a&gt;=0 and a&lt;=100:<br>        print(‘100以内’)<br>    elif a&gt;=101 and a&lt;=200:<br>        print(‘200以内’)<br>    else:<br>        print(‘不晓得’)</p>
+<p>func()<br>4.if 嵌套<br>1.外层的if判断，也可以是if-else<br>2.内层的if判断，也可以是if-else<br>3.根据实际开发的情况，进行选择</p>
+<h4 id="循环语句-while循环"><a href="#循环语句-while循环" class="headerlink" title="循环语句-while循环"></a>循环语句-while循环</h4><p>1.while 循环格式：<br>while 条件：<br>    条件满足，做的事情1<br>    条件满足，做的事情1<br>    条件满足，做的事情1<br>    。。。<br>2.while循环嵌套<br>while循环嵌套：<br>类似if的嵌套，while嵌套就是：while里面还有while</p>
+<h4 id="循环语句-For循环"><a href="#循环语句-For循环" class="headerlink" title="循环语句-For循环"></a>循环语句-For循环</h4><p>for循环<br>像while循环一样，for可以完成循环的功能。</p>
+<p>在Python中 for循环可以遍历任何序列的项目，如一个列表或者一个字符串等。</p>
+<p>for循环的格式：<br>for 临时变量 in 列表或者字符串等可迭代对象:<br>    循环满足条件时执行的代码</p>
+<h4 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h4><p>break的作用：满足条件时，立刻结束break所在的循环<br>continue的作用：当满足条件时,用来结束本次循环，紧接着执行下一次的循环<br>注意：<br>1.break/continue只能用在循环中，除此以外不能单独使用<br>2.break/continue在嵌套循环中，只对最近的一层循环起作用</p>
+<h4 id="Python-pass-语句"><a href="#Python-pass-语句" class="headerlink" title="Python pass 语句"></a>Python pass 语句</h4><p>pass作用：<br>1.Python pass是空语句，是为了保持程序结构的完整性。<br>2.pass 不做任何事情，一般用做占位语句。</p>
+<h4 id="字符串-下标"><a href="#字符串-下标" class="headerlink" title="字符串-下标"></a>字符串-下标</h4><p>下标索引<br>所谓“下标”，就是编号，就好比超市中的存储柜的编号，通过这个编号就能找到相应的存储空间<br>字符串中的“下标”的使用：<br>列表与元组支持下标索引好理解，字符串实际上就是字符的数组，所以也支持下标索引。<br>注意python中下标从 0 开始</p>
+<h4 id="字符串-切片"><a href="#字符串-切片" class="headerlink" title="字符串-切片"></a>字符串-切片</h4><p>切片是指对操作的对象截取其中一部分的操作。<br>字符串、列表、元组都支持切片操作。</p>
+<p>切片的语法：[起始下标:结束:步长]<br>注意：选取的区间从”起始”位开始，到”结束”位的前一位结束（不包含结束位本身)，步长表示选取间隔。</p>
 
             </div>
 
@@ -224,8 +242,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/12/six/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/12/six/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/eleven/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/eleven/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

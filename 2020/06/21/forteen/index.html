@@ -151,12 +151,23 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1119895080,3120720251&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Jemeter初学-对数据库进行增删改查</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4018192705,3462437572&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Python元祖与字典</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>1.官网中下载一个 连接mysql数据库的jar包，放到新建的测试计划之中<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/1.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/1.png</a><br>2.新建个JDBC Connection Configuration 用来连接数据库(右击线程组-添加-配置原件-JDBC Connection Configuration)<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/2.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/2.png</a><br>3.新建一个 JDBC Request 用来写sql语句（右击线程组-添加-取样器-JDBC Request）<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/3.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/3.png</a><br>注意：标记处与上文中甜的数据库名要保持一致：<a href="http://qb82db59f.bkt.clouddn.com/4.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/4.png</a></p>
+                <h1 id="Python元祖、字典与集合"><a href="#Python元祖、字典与集合" class="headerlink" title="Python元祖、字典与集合"></a>Python元祖、字典与集合</h1><h2 id="元祖"><a href="#元祖" class="headerlink" title="元祖"></a>元祖</h2><p>元组<br>Python的元组与列表类似，不同之处在于元组的元素不能修改。元组使用小括号，列表使用方括号。<br>元组的内置函数count, index<br>index和count与字符串和列表中的用法相同</p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>软件开发中的字典<br>变量info为字典类型：<br>    info = {‘name’:’班长’, ‘id’:100, ‘sex’:’f’, ‘address’:’地球亚洲中国北京’}<br>说明：’name’:’班长’—-&gt; 键值对<br>字典和列表一样，也能够存储多个数据<br>列表中找某个元素时，是根据下标进行的<br>字典中找某个元素时，是根据’名字’（就是冒号:前面的那个值，例如上面代码中的’name’、’id’、’sex’）<br>字典的每个元素由2部分组成，键（key）:值（value）。例如 ‘name’:’班长’ ,’name’为键(key)，’班长’为值(value)</p>
+<h3 id="字典常见操作"><a href="#字典常见操作" class="headerlink" title="字典常见操作"></a>字典常见操作</h3><p>&lt;1&gt;修改元素<br>字典的每个元素中的数据是可以修改的，只要通过key找到，即可修改<br>&lt;2&gt;添加元素<br>demo:访问不存在的元素<br>如果在使用 变量名[‘键’] = 数据 时，这个“键”在字典中，不存在，那么就会新增这个元素<br>&lt;4&gt;删除元素<br>对字典进行删除操作，有一下几种：<br>（1）del<br>（2）clear() —- 清空<br>demo:del删除指定的元素（删除后不能访问，否则会报错）<br>demo:clear清空整个字典</p>
+<p>&lt;1&gt;len()<br>测量字典中，键值对的个数<br>&lt;2&gt;keys<br>返回一个包含字典所有KEY的列表<br>&lt;3&gt;values<br>返回一个包含字典所有value的列表<br>&lt;4&gt;items<br>返回一个包含所有（键，值）元祖的列表</p>
+<h3 id="常见的遍历操作"><a href="#常见的遍历操作" class="headerlink" title="常见的遍历操作"></a>常见的遍历操作</h3><p>遍历<br>通过for … in … 我们可以遍历字符串、列表、元组、字典等<br>注意python语法的缩进<br>字典的遍历<br>遍历字典的key（键）<br>字典的遍历<br>遍历字典的value（值）<br>demo：<br>字典的遍历<br>遍历字典的items（元素）<br>字典的遍历<br>遍历字典的items（键值对）</p>
+<p>enumerate()<br>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p>
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><p>集合是无序的，集合中的元素是唯一的，集合一般用于元组或者列表中的元素去重。<br>定义一个空集合<br>  set1 = set()</p>
+<p>添加元素(add，update)<br>add<br>set1 = {1, 2, 4, 5}<br>#添加元素<br>set1.add(8)</p>
+<p>update<br>set1 = {1, 2, 4, 5}<br>#是把要传入的元素拆分，做为个体传入到集合中<br>set1.update(“abcd”)<br>删除元素(remove，pop，discard)<br>remove<br>set1 = {1, 2, 4, 5}<br>#使用remove删除集合中的元素 如果有 直接删除 如果没有 程序报错<br>set1.remove(22)</p>
+<p>pop<br>set1 = {1, 2, 4, 5}<br>#使用pop删除是随机删除集合中的元素 如果set1没有元素讲程序报错<br>set1.pop()<br>discard<br>set1 = {1, 2, 4, 5}</p>
+<p>#使用discard删除 如果元素存在 直接删除 如果元素不存在 不做任何操作<br>set1.discard(2)</p>
+<h3 id="集合的交集和并集"><a href="#集合的交集和并集" class="headerlink" title="集合的交集和并集"></a>集合的交集和并集</h3><p>交集和并集( &amp; 和 | )<br>交集<br>set1 = {1, 2, 3, 4}<br>set2 = {3, 4, 5, 6}<br>new_set = set1 &amp; set2<br>print(new_set)<br>#{3, 4}<br>并集<br>set1 = {1, 2, 3, 4}<br>set2 = {3, 4, 5, 6}<br>new_set = set1 | set2<br>print(new_set)<br>#{1, 2, 3, 4, 5, 6}</p>
 
             </div>
 
@@ -219,8 +230,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/forteen/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/forteen/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

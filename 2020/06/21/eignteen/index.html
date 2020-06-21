@@ -151,12 +151,15 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1119895080,3120720251&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Jemeter初学-对数据库进行增删改查</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4018192705,3462437572&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Python异常及模块</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>1.官网中下载一个 连接mysql数据库的jar包，放到新建的测试计划之中<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/1.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/1.png</a><br>2.新建个JDBC Connection Configuration 用来连接数据库(右击线程组-添加-配置原件-JDBC Connection Configuration)<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/2.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/2.png</a><br>3.新建一个 JDBC Request 用来写sql语句（右击线程组-添加-取样器-JDBC Request）<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/3.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/3.png</a><br>注意：标记处与上文中甜的数据库名要保持一致：<a href="http://qb82db59f.bkt.clouddn.com/4.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/4.png</a></p>
+                <h1 id="Python异常及模块"><a href="#Python异常及模块" class="headerlink" title="Python异常及模块"></a>Python异常及模块</h1><p>当Python检测到一个错误时，解释器就无法继续执行了，反而出现了一些错误的提示，这就是所谓的”异常”<br>&lt;1&gt;捕获异常 try…except…<br>此程序看不到任何错误，因为用except 捕获到了IOError异常，并添加了处理的方法<br>pass 表示实现了相应的实现，但什么也不做；如果把pass改为print语句，那么就会输出其他信息<br>把可能出现问题的代码，放在try中<br>把处理异常的代码，放在except中<br>&lt;2&gt; except捕获多个异常<br>注意：<br>当捕获多个异常时，可以把要捕获的异常的名字，放到except 后，并使用元组的方式仅进行存储<br>&lt;3&gt;获取异常的信息描述<br>&lt;4&gt; try…finally…<br>try…finally…语句用来表达这样的情况：<br>在程序中，如果一个段代码必须要执行，即无论异常是否产生都要执行，那么此时就需要使用finally。 比如文件关闭，释放锁，把数据库连接返还给连接池等</p>
+<h3 id="异常的传递"><a href="#异常的传递" class="headerlink" title="异常的传递"></a>异常的传递</h3><p>总结：<br>如果try嵌套，那么如果里面的try没有捕获到这个异常，那么外面的try会接收到这个异常，然后进行处理，如果外边的try依然没有捕获到，那么再进行传递。。。<br>如果一个异常是在一个函数中产生的，例如函数A—-&gt;函数B—-&gt;函数C,而异常是在函数C中产生的，那么如果函数C中没有对这个异常进行处理，那么这个异常会传递到函数B中，如果函数B有异常处理那么就会按照函数B的处理方式进行执行；如果函数B也没有异常处理，那么这个异常会继续传递，以此类推。。。如果所有的函数都没有处理，那么此时就会进行异常的默认处理，即通常见到的那样<br>注意观察上图中，当调用test3函数时，在test1函数内部产生了异常，此异常被传递到test3函数中完成了异常处理，而当异常处理完后，并没有返回到函数test1中进行执行，而是在函数test3中继续执行</p>
+<h3 id="抛出自定义的异常"><a href="#抛出自定义的异常" class="headerlink" title="抛出自定义的异常"></a>抛出自定义的异常</h3><p>你可以用raise语句来引发一个异常。异常/错误对象必须有一个名字，且它们应是Error或Exception类的子类<br>注意<br>以上程序中，关于代码#super().<strong>init</strong>()的说明<br>这一行代码，可以调用也可以不调用，建议调用，因为<strong>init</strong>方法往往是用来对创建完的对象进行初始化工作，如果在子类中重写了父类的<strong>init</strong>方法，即意味着父类中的很多初始化工作没有做，这样就不保证程序的稳定了，所以在以后的开发中，如果重写了父类的<strong>init</strong>方法，最好是先调用父类的这个方法，然后再添加自己的功能</p>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>&lt;1&gt;Python中的模块<br>Python中有一个概念叫做模块（module），这个和C语言中的头文件以及Java中的包很类似，比如在Python中要调用sqrt函数，必须用import关键字引入math这个模块<br>&lt;2&gt;import<br>在Python中用关键字import来引入某个模块，比如要引用模块math，就可以在文件最开始的地方用import math来引入。<br>在调用math模块中的函数时，必须这样引用：<br>　　模块名.函数名<br>3&gt;from…import<br>Python的from语句让你从模块中导入一个指定的部分到当前命名空间中<br>语法如下：<br>    from modname import name1[, name2[, … nameN]]<br>例如，要导入模块fib的fibonacci函数，使用如下语句：<br>    from fib import fibonacci<br>&lt;4&gt;from … import *<br>把一个模块的所有内容全都导入到当前的命名空间也是可行的，只需使用如下声明：<br>    from modname import *<br>注意<br>这提供了一个简单的方法来导入一个模块中的所有项目。然而这种声明不该被过多地使用。</p>
 
             </div>
 
@@ -219,8 +222,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/eignteen/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/eignteen/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

@@ -151,12 +151,21 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1119895080,3120720251&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Jemeter初学-对数据库进行增删改查</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4018192705,3462437572&amp;fm=26&amp;gp=0.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Python列表常见操作</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>1.官网中下载一个 连接mysql数据库的jar包，放到新建的测试计划之中<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/1.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/1.png</a><br>2.新建个JDBC Connection Configuration 用来连接数据库(右击线程组-添加-配置原件-JDBC Connection Configuration)<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/2.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/2.png</a><br>3.新建一个 JDBC Request 用来写sql语句（右击线程组-添加-取样器-JDBC Request）<br>  详图：<a href="http://qb82db59f.bkt.clouddn.com/3.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/3.png</a><br>注意：标记处与上文中甜的数据库名要保持一致：<a href="http://qb82db59f.bkt.clouddn.com/4.png" target="_blank" rel="noopener">http://qb82db59f.bkt.clouddn.com/4.png</a></p>
+                <h1 id="Python列表常见操作"><a href="#Python列表常见操作" class="headerlink" title="Python列表常见操作"></a>Python列表常见操作</h1><p>列表的格式：变量A的类型为列表<br>namesList = [‘xiaoWang’,’xiaoZhang’,’xiaoHua’]<br>例:<br>namesList = [‘xiaoWang’,’xiaoZhang’,’xiaoHua’]<br>    print(namesList[0])<br>    print(namesList[1])<br>    print(namesList[2])<br>结果：</p>
+<pre><code>xiaoWang
+xiaoZhang
+xiaoHua</code></pre><h3 id="列表的循环遍历"><a href="#列表的循环遍历" class="headerlink" title="列表的循环遍历"></a>列表的循环遍历</h3><p>1.使用for循环<br>为了更有效率的输出列表的每个数据，可以使用循环来完成<br>例:<br>    namesList = [‘xiaoWang’,’xiaoZhang’,’xiaoHua’]<br>    for name in namesList:<br>        print(name)<br>结果:<br>    xiaoWang<br>    xiaoZhang<br>    xiaoHua</p>
+<p>2.使用while循环<br>为了更有效率的输出列表的每个数据，可以使用循环来完成<br>例:<br>    namesList = [‘xiaoWang’,’xiaoZhang’,’xiaoHua’]<br>    length = len(namesList)<br>    i = 0<br>    while i&lt;length:<br>        print(namesList[i])<br>        i+=1<br>结果:<br>    xiaoWang<br>    xiaoZhang<br>    xiaoHua</p>
+<p>3.列表中存放的数据是可以进行修改的，比如”增”、”删”、”改”、”查”<br>&lt;1&gt;添加元素(“增”append, extend, insert)<br>append：通过append可以向列表（尾部）添加元素<br>extend：通过extend可以将另一个集合中的元素逐一添加到列表中<br>insert：insert(index, object) 在指定位置index前插入元素object</p>
+<p>&lt;2&gt;修改元素(“改”)<br>修改元素的时候，要通过下标来确定要修改的是哪个元素，然后才能进行修改</p>
+<p>&lt;3&gt;查找元素(“查”in, not in, index, count)<br>所谓的查找，就是看看指定的元素是否存在<br>in, not in<br>python中查找的常用方法为：<br>in（存在）,如果存在那么结果为true，否则为false<br>not in（不存在），如果不存在那么结果为true，否则false</p>
+<p>&lt;4&gt;删除元素(“删”del, pop, remove)<br>类比现实生活中，如果某位同学调班了，那么就应该把这个条走后的学生的姓名删除掉；在开发中经常会用到删除这种功能。<br>列表元素的常用删除方法有：<br>del：根据下标进行删除<br>pop：删除最后一个元素<br>remove：根据元素的值进行删除</p>
+<p>&lt;5&gt;排序(sort, reverse)<br>sort方法是将list按特定顺序重新排列，默认为由小到大，参数reverse=True可改为倒序，由大到小。<br>reverse方法是将list逆置。</p>
 
             </div>
 
@@ -219,8 +228,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/15/eight/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/thrteen/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://github.com/Lan-warmth/wenqing.github.io/2020/06/21/thrteen/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
